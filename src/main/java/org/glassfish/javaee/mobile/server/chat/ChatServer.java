@@ -34,15 +34,13 @@ public class ChatServer {
     }
 
     @OnMessage
-    public void message(ChatMessage message, Session client) {
+    public void message(ChatMessage message) {
         for (Session peer : peers) {
-            if (!peer.equals(client)) {
-                try {
-                    peer.getBasicRemote().sendObject(message);
-                } catch (IOException | EncodeException ex) {
-                    Logger.getLogger(ChatServer.class.getName()).log(
-                            Level.SEVERE, "Error sending message", ex);
-                }
+            try {
+                peer.getBasicRemote().sendObject(message);
+            } catch (IOException | EncodeException ex) {
+                Logger.getLogger(ChatServer.class.getName()).log(
+                        Level.SEVERE, "Error sending message", ex);
             }
         }
     }
