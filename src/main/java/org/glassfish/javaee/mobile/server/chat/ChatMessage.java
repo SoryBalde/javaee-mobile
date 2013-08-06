@@ -6,6 +6,8 @@ import java.util.Date;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.websocket.Decoder;
 import javax.websocket.Encoder;
 import javax.websocket.EndpointConfig;
@@ -13,7 +15,11 @@ import javax.websocket.EndpointConfig;
 public class ChatMessage
         implements Decoder.Text<ChatMessage>, Encoder.Text<ChatMessage> {
 
+    @NotNull
+    @Size(min = 1, max = 42)
     private String user;
+    @NotNull
+    @Size(min = 1, max = 255)
     private String message;
 
     @Override

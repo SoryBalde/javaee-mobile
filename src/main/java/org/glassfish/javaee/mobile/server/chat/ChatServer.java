@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Singleton;
+import javax.validation.Valid;
 import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
@@ -35,7 +36,7 @@ public class ChatServer {
     }
 
     @OnMessage
-    public void message(ChatMessage message) {
+    public void message(@Valid ChatMessage message) {
         for (Session peer : peers) {
             try {
                 peer.getBasicRemote().sendObject(message);
