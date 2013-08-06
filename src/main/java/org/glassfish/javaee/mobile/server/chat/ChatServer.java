@@ -1,11 +1,11 @@
 package org.glassfish.javaee.mobile.server.chat;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.Singleton;
 import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
@@ -15,12 +15,13 @@ import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint(value = "/chat",
         encoders = {ChatMessage.class}, decoders = {ChatMessage.class})
+@Singleton
 public class ChatServer {
 
     private Set<Session> peers;
 
     public ChatServer() {
-        peers = Collections.synchronizedSet(new HashSet<Session>());
+        peers = new HashSet<>();
     }
 
     @OnOpen

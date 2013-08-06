@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -22,6 +24,8 @@ public class ToDoItem implements Serializable {
     @GeneratedValue
     private Long id;
     private String username;
+    @NotNull
+    @Size(min = 1, max = 110)
     private String description;
     private boolean completed;
 

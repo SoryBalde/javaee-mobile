@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
-import org.glassfish.jersey.moxy.json.MoxyJsonFeature;
 
 @ApplicationPath("resources")
 public class RestConfiguration extends Application {
@@ -18,6 +17,6 @@ public class RestConfiguration extends Application {
 
     private void addRestResourceClasses(Set<Class<?>> resources) {
         resources.add(org.glassfish.javaee.mobile.server.todo.JsonMoxyConfigurationContextResolver.class);
-        resources.add(org.glassfish.javaee.mobile.server.todo.ToDoItemResource.class);
+        resources.add(org.glassfish.javaee.mobile.server.todo.ToDoResource.class);
     }
 }

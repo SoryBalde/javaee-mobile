@@ -17,6 +17,11 @@ public class ChatMessage
     private String message;
 
     @Override
+    public void init(EndpointConfig config) {
+        // Nothing to do.
+    }
+
+    @Override
     public ChatMessage decode(String value) {
         try (JsonReader jsonReader = Json.createReader(
                 new StringReader(value))) {
@@ -30,7 +35,7 @@ public class ChatMessage
 
     @Override
     public boolean willDecode(String string) {
-        return true;
+        return true; // Detect if it's a valid format.
     }
 
     @Override
@@ -44,11 +49,6 @@ public class ChatMessage
                 .build();
 
         return jsonObject.toString();
-    }
-
-    @Override
-    public void init(EndpointConfig config) {
-        // Nothing to do.
     }
 
     @Override
