@@ -40,14 +40,20 @@
 package org.glassfish.javaee.mobile.server.chat;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Singleton;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
 import javax.websocket.EncodeException;
 import javax.websocket.OnClose;
+import javax.websocket.OnError;
 import javax.websocket.OnMessage;
 import javax.websocket.OnOpen;
 import javax.websocket.Session;
@@ -75,7 +81,7 @@ public class ChatServer {
     }
 
     @OnMessage
-    public void message(@Valid ChatMessage message) {
+    public void onMessage(@Valid ChatMessage message) {
         for (Session peer : peers) {
             try {
                 peer.getBasicRemote().sendObject(message);
@@ -83,6 +89,22 @@ public class ChatServer {
                 Logger.getLogger(ChatServer.class.getName()).log(
                         Level.SEVERE, "Error sending message", ex);
             }
+        }
+    }
+
+    @OnError
+    public void onError(Session session, Throwable error) {
+        try {
+            JsonObject jsonObject = Json.createObjectBuilder()
+                    .add("error",
+                    ((ConstraintViolationException) error.getCause())
+                    .getConstraintViolations().iterator().next()
+                    .getMessage())
+                    .build();
+            session.getBasicRemote().sendText(jsonObject.toString());
+        } catch (IOException ex) {
+            Logger.getLogger(ChatServer.class.getName()).log(
+                    Level.SEVERE, null, ex);
         }
     }
 }
