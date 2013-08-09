@@ -95,13 +95,19 @@ public class ChatServer {
     @OnError
     public void onError(Session session, Throwable error) {
         try {
-            JsonObject jsonObject = Json.createObjectBuilder()
-                    .add("error",
-                    ((ConstraintViolationException) error.getCause())
-                    .getConstraintViolations().iterator().next()
-                    .getMessage())
-                    .build();
-            session.getBasicRemote().sendText(jsonObject.toString());
+            if (error.getCause() instanceof ConstraintViolationException) {
+                // Just report the first validation problem.
+                JsonObject jsonObject = Json.createObjectBuilder()
+                        .add("error",
+                        ((ConstraintViolationException) error.getCause())
+                        .getConstraintViolations().iterator().next()
+                        .getMessage())
+                        .build();
+                session.getBasicRemote().sendText(jsonObject.toString());
+            } else {
+                Logger.getLogger(ChatServer.class.getName()).log(
+                        Level.SEVERE, null, error);
+            }
         } catch (IOException ex) {
             Logger.getLogger(ChatServer.class.getName()).log(
                     Level.SEVERE, null, ex);
