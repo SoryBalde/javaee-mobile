@@ -1,2 +1,2 @@
-Native Andriod client for a Java EE 7 server-side backend consisting of a chat WebSocket API
+Java EE 7 server-side application targeting Android and iOS consisting of a chat WebSocket API
 and a to do list REST API implemented using the Java API for WebSocket, JSON-P, JAX-RS 2, CDI, Bean Validation, EJB 3 and JPA.
