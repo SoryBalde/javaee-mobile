@@ -62,11 +62,38 @@ public class ToDoItem implements Serializable {
     @Id
     @GeneratedValue
     private Long id;
+    
     private String username;
+    
+    private String title;
+    
     @NotNull
     @Size(min = 1, max = 110)
     private String description;
+    
     private boolean completed;
+    
+    
+    
+    /**
+     * Default constructor
+     */
+    protected ToDoItem() {
+        // Default constructor
+    }
+    
+    /**
+     * Constructor for creating instances
+     * @param username - username
+     * @param Description - description of the task
+     * @param completed - completed
+     */
+    public ToDoItem(String username, String title, String description, boolean completed) {
+        this.title = title;
+        this.username = username;
+        this.description = description;
+        this.completed = completed;
+    }
 
     public Long getId() {
         return id;
@@ -83,6 +110,14 @@ public class ToDoItem implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -125,6 +160,7 @@ public class ToDoItem implements Serializable {
     public String toString() {
         return "ToDoItem[ id=" + id
                 + " username=" + username
+                + " title=" + title
                 + " desciption=" + description
                 + " completed=" + completed + " ]";
     }

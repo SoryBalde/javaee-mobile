@@ -41,6 +41,8 @@ package org.glassfish.javaee.mobile.server.todo;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
 import javax.validation.Valid;
@@ -55,21 +57,27 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("todo/{username}")
+@Path("/todo/{username}")
 @ApplicationScoped
 public class ToDoResource implements Serializable {
+    
+    /**
+     * Logger
+     */
+    private static final Logger logger = Logger.getLogger("ToDoResource");
 
     @EJB // @Inject should work.
     private ToDoService service;
 
     @POST
-    @Consumes({"application/json"})
+    @Consumes({"text/plain"})
     public void create(
             @PathParam("username")
             @NotNull
             @Size(min = 6, max = 14) String username,
-            @Valid ToDoItem item) {
-        service.addToDoItem(username, item);
+            String item) {
+        logger.log(Level.INFO, "Adding item: {0}", item);
+      //  service.addToDoItem(username, item);
     }
 
     @PUT
