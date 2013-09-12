@@ -72,9 +72,7 @@ public class ToDoItem implements Serializable {
     private String description;
     
     private boolean completed;
-    
-    
-    
+ 
     /**
      * Default constructor
      */

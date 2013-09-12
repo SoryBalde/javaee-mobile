@@ -50,9 +50,9 @@ public class DefaultToDoService implements ToDoService {
     private ToDoItemRepository repository;
 
     @Override
-    public void addToDoItem(String username, ToDoItem item) {
+    public long addToDoItem(String username, ToDoItem item) {
         item.setUsername(username);
-        repository.create(item);
+        return repository.create(item);
     }
 
     @Override

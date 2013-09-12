@@ -53,8 +53,15 @@ public class DefaultToDoItemRepository
     private EntityManager entityManager;
 
     @Override
-    public void create(ToDoItem item) {
+    public long create(ToDoItem item) {
+        try {
         entityManager.persist(item);
+        } catch (Throwable t) {
+           
+            System.out.println("Message: " + t.getMessage());
+            System.out.println("" + t.getMessage());
+        }
+        return item.getId();
     }
 
     @Override
