@@ -65,6 +65,8 @@ public class ToDoItem implements Serializable {
     
     private String username;
     
+    @NotNull
+    @Size(min = 1, max = 42)    
     private String title;
     
     @NotNull
@@ -82,8 +84,10 @@ public class ToDoItem implements Serializable {
     
     /**
      * Constructor for creating instances
+     * 
      * @param username - username
-     * @param Description - description of the task
+     * @param title Task title
+     * @param description - description of the task
      * @param completed - completed
      */
     public ToDoItem(String username, String title, String description, boolean completed) {

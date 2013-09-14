@@ -43,7 +43,7 @@ import java.util.List;
 
 public interface ToDoService {
 
-    long addToDoItem(String username, ToDoItem item);
+    Long addToDoItem(String username, ToDoItem item);
 
     List<ToDoItem> findToDoItemsByUsername(String username);
 

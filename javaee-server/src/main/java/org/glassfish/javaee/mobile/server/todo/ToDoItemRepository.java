@@ -43,7 +43,7 @@ import java.util.List;
 
 public interface ToDoItemRepository {
 
-    long create(ToDoItem item);
+    Long create(ToDoItem item);
 
     void delete(ToDoItem item);
 

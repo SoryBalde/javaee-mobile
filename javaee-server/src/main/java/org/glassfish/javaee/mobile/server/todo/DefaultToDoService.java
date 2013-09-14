@@ -40,35 +40,54 @@
 package org.glassfish.javaee.mobile.server.todo;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 @Stateless
 public class DefaultToDoService implements ToDoService {
+	/**
+	 * Logger
+	 */
+	private static final Logger logger = Logger
+			.getLogger(DefaultToDoService.class.getName());
 
-    @Inject
-    private ToDoItemRepository repository;
+	@Inject
+	private ToDoItemRepository repository;
 
-    @Override
-    public long addToDoItem(String username, ToDoItem item) {
-        item.setUsername(username);
-        return repository.create(item);
-    }
+	@Override
+	public Long addToDoItem(String username, ToDoItem item) {
+		item.setUsername(username);
 
-    @Override
-    public void updateToDoItem(String username, ToDoItem item) {
-        item.setUsername(username);
-        repository.update(item);
-    }
+		logger.log(Level.INFO, "Adding item: {0}", item);
 
-    @Override
-    public void removeToDoItem(String username, Long id) {
-        ToDoItem item = repository.find(id);
-        repository.delete(item);
-    }
+		return repository.create(item);
+	}
 
-    @Override
-    public List<ToDoItem> findToDoItemsByUsername(String username) {
-        return repository.findByUsername(username);
-    }
+	@Override
+	public void updateToDoItem(String username, ToDoItem item) {
+		item.setUsername(username);
+
+		logger.log(Level.INFO, "Updating item: {0}", item);
+
+		repository.update(item);
+	}
+
+	@Override
+	public void removeToDoItem(String username, Long id) {
+		ToDoItem item = repository.find(id);
+
+		logger.log(Level.INFO, "Removing item: {0}", item);
+
+		repository.delete(item);
+	}
+
+	@Override
+	public List<ToDoItem> findToDoItemsByUsername(String username) {
+		logger.log(Level.INFO, "Getting all items for: {0}", username);
+
+		return repository.findByUsername(username);
+	}
 }

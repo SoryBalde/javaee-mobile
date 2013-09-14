@@ -80,9 +80,11 @@
            user following this format:
         <pre>
         [{"id": "to do item ID", 
+         "title": "item 1 title",
          "description": "item 1 description", 
          "completed": "true|false"},
          {"id": "to do item ID", 
+         "title": "item 1 title",
          "description": "item 2 description", 
          "completed": "true|false"}
          ...]        
@@ -92,15 +94,18 @@
                 http://localhost:8080/javaee-mobile-server/resources/todo/{username}</a>.
         The POST body must follow this format:
         <pre>
-        {"description": "item description"}
+        {"title": "item title",
+         "description": "item description"}
         </pre>
         An ID will be automatically assigned and the item will be assumed to be
-        incomplete. To modify a to do item, the client must issue a PUT
+        incomplete. The POST response will return the ID assigned to the item as plain text (not JSON). 
+        To modify a to do item, the client must issue a PUT
         request to this URL: <a href="http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}">
                 http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}</a>.
         The PUT request body must follow this format:
         <pre>
         {"id": "to do item ID", 
+         "title": "item title",
          "description": "item description", 
          "completed": "true|false"}
         </pre>
