@@ -49,9 +49,13 @@
         <p>The mobile server consists of a chat WebSocket API
         and a to do list REST API implemented using the Java 
         API for WebSocket, JSON-P, JAX-RS 2 and Java EE 7.</p>
+        <p>Note that while this page is not secured, both the WebSocket and
+        REST endpoints are secured using HTTP BASIC authentication and SSL. You
+        can set the usernames and SHA-256 encrypted passwords in the SQL load
+        scripts of the application source.</p>
         <p>The WebSocket chat endpoint is at: 
-            <a href="ws://localhost:8080/javaee-mobile-server/chat">
-                ws://localhost:8080/javaee-mobile-server/chat</a>. The 
+            <a href="wss://localhost:8181/javaee-mobile-server/chat">
+                wss://localhost:8181/javaee-mobile-server/chat</a>. The 
             endpoint communicates via JSON. Once connected, a client
             can send a chat message using this format:
         <pre>
@@ -69,13 +73,13 @@
          "timestamp": "the server timestamp - MM/dd/yyyy h:mm:ss a z"}        
         </pre>
         </p>
-        <p>The REST endpoint is available at <a href="http://localhost:8080/javaee-mobile-server/resources/todo">
+        <p>The REST endpoint is available at <a href="https://localhost:8181/javaee-mobile-server/resources/todo">
                 http://localhost:8080/javaee-mobile-server/resources/todo</a>. The
            REST endpoint also communicates with the client using JSON.
            To do items are stored under various usernames. To retrieve
            the current to do items for a given user, the client must issue
-           a GET request to this URL: <a href="http://localhost:8080/javaee-mobile-server/resources/todo/{username}">
-                http://localhost:8080/javaee-mobile-server/resources/todo/{username}</a>.
+           a GET request to this URL: <a href="https://localhost:8181/javaee-mobile-server/resources/todo/{username}">
+                https://localhost:8181/javaee-mobile-server/resources/todo/{username}</a>.
            The server will respond with the list of current to do items for the
            user following this format:
         <pre>
@@ -90,8 +94,8 @@
          ...]        
         </pre>
         To add an item for a user, the client must issue a POST request to
-        this URL: <a href="http://localhost:8080/javaee-mobile-server/resources/todo/{username}">
-                http://localhost:8080/javaee-mobile-server/resources/todo/{username}</a>.
+        this URL: <a href="https://localhost:8181/javaee-mobile-server/resources/todo/{username}">
+                https://localhost:8181/javaee-mobile-server/resources/todo/{username}</a>.
         The POST body must follow this format:
         <pre>
         {"title": "item title",
@@ -100,8 +104,8 @@
         An ID will be automatically assigned and the item will be assumed to be
         incomplete. The POST response will return the ID assigned to the item as plain text (not JSON). 
         To modify a to do item, the client must issue a PUT
-        request to this URL: <a href="http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}">
-                http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}</a>.
+        request to this URL: <a href="https://localhost:8181/javaee-mobile-server/resources/todo/{username}/{id}">
+                https://localhost:8181/javaee-mobile-server/resources/todo/{username}/{id}</a>.
         The PUT request body must follow this format:
         <pre>
         {"id": "to do item ID", 
@@ -110,8 +114,8 @@
          "completed": "true|false"}
         </pre>
         To delete a to do item, the client must issue a DELETE request to
-        this URL: <a href="http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}">
-                http://localhost:8080/javaee-mobile-server/resources/todo/{username}/{id}</a>.
+        this URL: <a href="https://localhost:8181/javaee-mobile-server/resources/todo/{username}/{id}">
+                https://localhost:8181/javaee-mobile-server/resources/todo/{username}/{id}</a>.
         </p>
     </body>
 </html>
