@@ -88,7 +88,7 @@ public class ChatMessage
     @Override
     public String encode(ChatMessage chatMessage) {
         JsonObject jsonObject = Json.createObjectBuilder()
-                .add("user", user)
+                .add("user", user + "_r")
                 .add("message", message)
                 .add("timestamp",
                 new SimpleDateFormat("MM/dd/yyyy h:mm:ss a z")

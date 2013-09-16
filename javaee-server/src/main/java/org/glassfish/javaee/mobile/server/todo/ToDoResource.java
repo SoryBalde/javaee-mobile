@@ -91,6 +91,7 @@ public class ToDoResource implements Serializable {
             @PathParam("id") Long id,
             @Valid ToDoItem item) {
         item.setId(id);
+        logger.log(Level.INFO, "Updating item: {0}", id);
         service.updateToDoItem(username, item);
     }
 

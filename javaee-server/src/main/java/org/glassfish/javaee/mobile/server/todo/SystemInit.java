@@ -39,50 +39,29 @@
  */
 package org.glassfish.javaee.mobile.server.todo;
 
-import java.io.Serializable;
-import java.util.List;
-import javax.enterprise.context.RequestScoped;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+import javax.inject.Inject;
 
-@RequestScoped // Remove this, it should be default scoped.
-public class DefaultToDoItemRepository
-        implements ToDoItemRepository, Serializable {
-
-    @PersistenceContext
-    private EntityManager entityManager;
-
-    @Override
-    public long create(ToDoItem item) {
-        try {
-            entityManager.persist(item);
-        } catch (Throwable t) {
-            System.out.println("Message: " + t.getMessage());
-            System.out.println("" + t.getMessage());
-        }
-        return item.getId();
+/**
+ * Initializes the system
+ * @author Ryan Cuprak
+ */
+@Startup
+@Singleton
+public class SystemInit {
+    
+    /**
+     * Inject the todo service
+     */
+    @Inject
+    private ToDoService todoService;
+    
+    @PostConstruct
+    public void init() {
+        ToDoItem item = new ToDoItem("rcuprak","Bike to Tiburon","Bike from Fisherman's Wharf to Tiburon",false);
+        todoService.addToDoItem("rcuprak", item);
     }
-
-    @Override
-    public ToDoItem find(Long id) {
-        return entityManager.find(ToDoItem.class, id);
-    }
-
-    @Override
-    public List<ToDoItem> findByUsername(String username) {
-        return entityManager.createNamedQuery(
-                "ToDoItem.findByUsername",
-                ToDoItem.class)
-                .setParameter("username", username).getResultList();
-    }
-
-    @Override
-    public void update(ToDoItem item) {
-        entityManager.merge(item);
-    }
-
-    @Override
-    public void delete(ToDoItem item) {
-        entityManager.remove(item);
-    }
+    
 }
