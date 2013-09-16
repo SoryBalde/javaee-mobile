@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		151C0B4617C8446400CD2A32 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C0B4517C8446400CD2A32 /* UIKit.framework */; };
+		151C0B4817C8446400CD2A32 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C0B4717C8446400CD2A32 /* Foundation.framework */; };
+		151C0B4A17C8446400CD2A32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151C0B4917C8446400CD2A32 /* CoreGraphics.framework */; };
+		151C0B5017C8446400CD2A32 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 151C0B4E17C8446400CD2A32 /* InfoPlist.strings */; };
+		151C0B5217C8446400CD2A32 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C0B5117C8446400CD2A32 /* main.m */; };
+		151C0B5617C8446400CD2A32 /* JavaOneAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C0B5517C8446400CD2A32 /* JavaOneAppDelegate.m */; };
+		151C0B5817C8446400CD2A32 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 151C0B5717C8446400CD2A32 /* Default.png */; };
+		151C0B5A17C8446400CD2A32 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 151C0B5917C8446400CD2A32 /* Default@2x.png */; };
+		151C0B5C17C8446400CD2A32 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 151C0B5B17C8446400CD2A32 /* Default-568h@2x.png */; };
+		151C0B6317C8458600CD2A32 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151C0B6217C8458600CD2A32 /* Storyboard.storyboard */; };
+		151C0B6617C9210100CD2A32 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 151C0B6517C9210100CD2A32 /* LoginViewController.m */; };
+		1565B47717E65F0400D219C2 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1565B47617E65F0400D219C2 /* libicucore.dylib */; };
+		1565B47E17E667D300D219C2 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1565B47D17E667D300D219C2 /* ChatViewController.m */; };
+		1565B48A17E68E6700D219C2 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 1565B48317E68E6600D219C2 /* base64.c */; };
+		1565B48B17E68E6700D219C2 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1565B48617E68E6600D219C2 /* NSData+SRB64Additions.m */; };
+		1565B48C17E68E6700D219C2 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1565B48917E68E6700D219C2 /* SRWebSocket.m */; };
+		1565B49217E6953E00D219C2 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1565B49117E6953E00D219C2 /* ChatCell.m */; };
+		1565B49517E6964900D219C2 /* ChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1565B49417E6964900D219C2 /* ChatMessage.m */; };
+		158682E117D9799B008947F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158682E017D9799B008947F8 /* Security.framework */; };
+		158682E317D979AD008947F8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158682E217D979AD008947F8 /* QuartzCore.framework */; };
+		158682E517D979C7008947F8 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 158682E417D979C7008947F8 /* libxml2.2.dylib */; };
+		1586830517D99269008947F8 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 158682D417D97805008947F8 /* libRestKit.a */; };
+		1586830717D9928C008947F8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1586830617D9928C008947F8 /* CoreData.framework */; };
+		1586830B17DABEB4008947F8 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586830A17DABEB4008947F8 /* ToDoItem.m */; };
+		1586831917DCF3FE008947F8 /* ToDoItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586831817DCF3FE008947F8 /* ToDoItemStore.m */; };
+		1586831D17DD0434008947F8 /* ToDoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1586831C17DD0434008947F8 /* ToDoItemCell.xib */; };
+		1586832517DD06E8008947F8 /* checkBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 1586832117DD06E7008947F8 /* checkBox.png */; };
+		1586832617DD06E8008947F8 /* checkBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1586832217DD06E7008947F8 /* checkBox@2x.png */; };
+		1586832717DD06E8008947F8 /* checkBoxMarked.png in Resources */ = {isa = PBXBuildFile; fileRef = 1586832317DD06E7008947F8 /* checkBoxMarked.png */; };
+		1586832817DD06E8008947F8 /* checkBoxMarked@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1586832417DD06E8008947F8 /* checkBoxMarked@2x.png */; };
+		1586832C17DD0D5D008947F8 /* ToDoItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586832B17DD0D5D008947F8 /* ToDoItemCell.m */; };
+		1586832F17DD2443008947F8 /* ToDoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586832E17DD2443008947F8 /* ToDoViewController.m */; };
+		1586833217DD366A008947F8 /* EditItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586833117DD3669008947F8 /* EditItemViewController.m */; };
+		1586833717DD72F2008947F8 /* TodoClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586833617DD72F1008947F8 /* TodoClient.m */; };
+		1586833A17E011D8008947F8 /* AsyncTaskEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1586833917E011D8008947F8 /* AsyncTaskEvent.m */; };
+		15ABA8C117CDA4890096E7E6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ABA8C017CDA4890096E7E6 /* CFNetwork.framework */; };
+		15ABA8C317CDA4960096E7E6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ABA8C217CDA4960096E7E6 /* MobileCoreServices.framework */; };
+		15ABA8C517CDA4A30096E7E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15ABA8C417CDA4A30096E7E6 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		158682D317D97805008947F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		158682D517D97805008947F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		158682D717D97805008947F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		158682D917D97805008947F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		158682EC17D985E5008947F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		151C0B4217C8446400CD2A32 /* JavaOneTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JavaOneTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		151C0B4517C8446400CD2A32 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		151C0B4717C8446400CD2A32 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		151C0B4917C8446400CD2A32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		151C0B4D17C8446400CD2A32 /* JavaOneTodo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JavaOneTodo-Info.plist"; sourceTree = "<group>"; };
+		151C0B4F17C8446400CD2A32 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		151C0B5117C8446400CD2A32 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		151C0B5317C8446400CD2A32 /* JavaOneTodo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JavaOneTodo-Prefix.pch"; sourceTree = "<group>"; };
+		151C0B5417C8446400CD2A32 /* JavaOneAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JavaOneAppDelegate.h; sourceTree = "<group>"; };
+		151C0B5517C8446400CD2A32 /* JavaOneAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JavaOneAppDelegate.m; sourceTree = "<group>"; };
+		151C0B5717C8446400CD2A32 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		151C0B5917C8446400CD2A32 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		151C0B5B17C8446400CD2A32 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		151C0B6217C8458600CD2A32 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		151C0B6417C9210100CD2A32 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		151C0B6517C9210100CD2A32 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		1565B43317E4A12200D219C2 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1565B47617E65F0400D219C2 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		1565B47C17E667D300D219C2 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		1565B47D17E667D300D219C2 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		1565B48317E68E6600D219C2 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		1565B48417E68E6600D219C2 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		1565B48517E68E6600D219C2 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		1565B48617E68E6600D219C2 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		1565B48717E68E6600D219C2 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		1565B48817E68E6700D219C2 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		1565B48917E68E6700D219C2 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		1565B49017E6953E00D219C2 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		1565B49117E6953E00D219C2 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		1565B49317E6964900D219C2 /* ChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatMessage.h; sourceTree = "<group>"; };
+		1565B49417E6964900D219C2 /* ChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatMessage.m; sourceTree = "<group>"; };
+		158682CC17D97804008947F8 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		158682E017D9799B008947F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		158682E217D979AD008947F8 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		158682E417D979C7008947F8 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		1586830617D9928C008947F8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1586830917DABEB4008947F8 /* ToDoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItem.h; sourceTree = "<group>"; };
+		1586830A17DABEB4008947F8 /* ToDoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItem.m; sourceTree = "<group>"; };
+		1586831717DCF3FE008947F8 /* ToDoItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItemStore.h; sourceTree = "<group>"; };
+		1586831817DCF3FE008947F8 /* ToDoItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItemStore.m; sourceTree = "<group>"; };
+		1586831C17DD0434008947F8 /* ToDoItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoItemCell.xib; sourceTree = "<group>"; };
+		1586832117DD06E7008947F8 /* checkBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBox.png; sourceTree = "<group>"; };
+		1586832217DD06E7008947F8 /* checkBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBox@2x.png"; sourceTree = "<group>"; };
+		1586832317DD06E7008947F8 /* checkBoxMarked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkBoxMarked.png; sourceTree = "<group>"; };
+		1586832417DD06E8008947F8 /* checkBoxMarked@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkBoxMarked@2x.png"; sourceTree = "<group>"; };
+		1586832A17DD0D5D008947F8 /* ToDoItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoItemCell.h; sourceTree = "<group>"; };
+		1586832B17DD0D5D008947F8 /* ToDoItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoItemCell.m; sourceTree = "<group>"; };
+		1586832D17DD2443008947F8 /* ToDoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToDoViewController.h; sourceTree = "<group>"; };
+		1586832E17DD2443008947F8 /* ToDoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToDoViewController.m; sourceTree = "<group>"; };
+		1586833017DD3669008947F8 /* EditItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditItemViewController.h; sourceTree = "<group>"; };
+		1586833117DD3669008947F8 /* EditItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditItemViewController.m; sourceTree = "<group>"; };
+		1586833517DD72F1008947F8 /* TodoClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoClient.h; sourceTree = "<group>"; };
+		1586833617DD72F1008947F8 /* TodoClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoClient.m; sourceTree = "<group>"; };
+		1586833817E011D8008947F8 /* AsyncTaskEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncTaskEvent.h; sourceTree = "<group>"; };
+		1586833917E011D8008947F8 /* AsyncTaskEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncTaskEvent.m; sourceTree = "<group>"; };
+		15ABA8C017CDA4890096E7E6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		15ABA8C217CDA4960096E7E6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		15ABA8C417CDA4A30096E7E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		151C0B3F17C8446300CD2A32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151C0B4817C8446400CD2A32 /* Foundation.framework in Frameworks */,
+				1565B47717E65F0400D219C2 /* libicucore.dylib in Frameworks */,
+				1586830717D9928C008947F8 /* CoreData.framework in Frameworks */,
+				1586830517D99269008947F8 /* libRestKit.a in Frameworks */,
+				158682E517D979C7008947F8 /* libxml2.2.dylib in Frameworks */,
+				158682E317D979AD008947F8 /* QuartzCore.framework in Frameworks */,
+				158682E117D9799B008947F8 /* Security.framework in Frameworks */,
+				15ABA8C517CDA4A30096E7E6 /* SystemConfiguration.framework in Frameworks */,
+				15ABA8C317CDA4960096E7E6 /* MobileCoreServices.framework in Frameworks */,
+				15ABA8C117CDA4890096E7E6 /* CFNetwork.framework in Frameworks */,
+				151C0B4617C8446400CD2A32 /* UIKit.framework in Frameworks */,
+				151C0B4A17C8446400CD2A32 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		151C0B3917C8446300CD2A32 = {
+			isa = PBXGroup;
+			children = (
+				158682CC17D97804008947F8 /* RestKit.xcodeproj */,
+				151C0B4B17C8446400CD2A32 /* JavaOneTodo */,
+				151C0B4417C8446400CD2A32 /* Frameworks */,
+				151C0B4317C8446400CD2A32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		151C0B4317C8446400CD2A32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				151C0B4217C8446400CD2A32 /* JavaOneTodo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		151C0B4417C8446400CD2A32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1565B47617E65F0400D219C2 /* libicucore.dylib */,
+				1586830617D9928C008947F8 /* CoreData.framework */,
+				158682E417D979C7008947F8 /* libxml2.2.dylib */,
+				158682E217D979AD008947F8 /* QuartzCore.framework */,
+				158682E017D9799B008947F8 /* Security.framework */,
+				15ABA8C417CDA4A30096E7E6 /* SystemConfiguration.framework */,
+				15ABA8C217CDA4960096E7E6 /* MobileCoreServices.framework */,
+				15ABA8C017CDA4890096E7E6 /* CFNetwork.framework */,
+				151C0B4517C8446400CD2A32 /* UIKit.framework */,
+				151C0B4717C8446400CD2A32 /* Foundation.framework */,
+				151C0B4917C8446400CD2A32 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		151C0B4B17C8446400CD2A32 /* JavaOneTodo */ = {
+			isa = PBXGroup;
+			children = (
+				1586832917DD06EE008947F8 /* graphics */,
+				1586830817DABE8A008947F8 /* Code */,
+				151C0B5417C8446400CD2A32 /* JavaOneAppDelegate.h */,
+				151C0B5517C8446400CD2A32 /* JavaOneAppDelegate.m */,
+				1586831C17DD0434008947F8 /* ToDoItemCell.xib */,
+				151C0B6217C8458600CD2A32 /* Storyboard.storyboard */,
+				151C0B4C17C8446400CD2A32 /* Supporting Files */,
+			);
+			path = JavaOneTodo;
+			sourceTree = "<group>";
+		};
+		151C0B4C17C8446400CD2A32 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				151C0B4D17C8446400CD2A32 /* JavaOneTodo-Info.plist */,
+				151C0B4E17C8446400CD2A32 /* InfoPlist.strings */,
+				151C0B5117C8446400CD2A32 /* main.m */,
+				151C0B5317C8446400CD2A32 /* JavaOneTodo-Prefix.pch */,
+				151C0B5717C8446400CD2A32 /* Default.png */,
+				151C0B5917C8446400CD2A32 /* Default@2x.png */,
+				151C0B5B17C8446400CD2A32 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1565B48D17E693F800D219C2 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				1565B48317E68E6600D219C2 /* base64.c */,
+				1565B48417E68E6600D219C2 /* base64.h */,
+				1565B48517E68E6600D219C2 /* NSData+SRB64Additions.h */,
+				1565B48617E68E6600D219C2 /* NSData+SRB64Additions.m */,
+				1565B48717E68E6600D219C2 /* SocketRocket-Prefix.pch */,
+				1565B48817E68E6700D219C2 /* SRWebSocket.h */,
+				1565B48917E68E6700D219C2 /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			sourceTree = "<group>";
+		};
+		1565B48E17E6940E00D219C2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				1565B47C17E667D300D219C2 /* ChatViewController.h */,
+				1565B47D17E667D300D219C2 /* ChatViewController.m */,
+				1565B49017E6953E00D219C2 /* ChatCell.h */,
+				1565B49117E6953E00D219C2 /* ChatCell.m */,
+				1565B49317E6964900D219C2 /* ChatMessage.h */,
+				1565B49417E6964900D219C2 /* ChatMessage.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		1565B48F17E6941400D219C2 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				1586830917DABEB4008947F8 /* ToDoItem.h */,
+				1586830A17DABEB4008947F8 /* ToDoItem.m */,
+				1586831717DCF3FE008947F8 /* ToDoItemStore.h */,
+				1586831817DCF3FE008947F8 /* ToDoItemStore.m */,
+				1586832A17DD0D5D008947F8 /* ToDoItemCell.h */,
+				1586832B17DD0D5D008947F8 /* ToDoItemCell.m */,
+				1586832D17DD2443008947F8 /* ToDoViewController.h */,
+				1586832E17DD2443008947F8 /* ToDoViewController.m */,
+				1586833017DD3669008947F8 /* EditItemViewController.h */,
+				1586833117DD3669008947F8 /* EditItemViewController.m */,
+				1586833517DD72F1008947F8 /* TodoClient.h */,
+				1586833617DD72F1008947F8 /* TodoClient.m */,
+				1586833817E011D8008947F8 /* AsyncTaskEvent.h */,
+				1586833917E011D8008947F8 /* AsyncTaskEvent.m */,
+			);
+			name = ToDo;
+			sourceTree = "<group>";
+		};
+		158682CD17D97804008947F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				158682D417D97805008947F8 /* libRestKit.a */,
+				158682D617D97805008947F8 /* RestKitTests.octest */,
+				158682D817D97805008947F8 /* RestKit.framework */,
+				158682DA17D97805008947F8 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1586830817DABE8A008947F8 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				1565B48F17E6941400D219C2 /* ToDo */,
+				1565B48E17E6940E00D219C2 /* Chat */,
+				1565B48D17E693F800D219C2 /* SocketRocket */,
+				151C0B6417C9210100CD2A32 /* LoginViewController.h */,
+				151C0B6517C9210100CD2A32 /* LoginViewController.m */,
+				1565B43317E4A12200D219C2 /* Constants.h */,
+			);
+			name = Code;
+			sourceTree = "<group>";
+		};
+		1586832917DD06EE008947F8 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				1586832117DD06E7008947F8 /* checkBox.png */,
+				1586832217DD06E7008947F8 /* checkBox@2x.png */,
+				1586832317DD06E7008947F8 /* checkBoxMarked.png */,
+				1586832417DD06E8008947F8 /* checkBoxMarked@2x.png */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		151C0B4117C8446300CD2A32 /* JavaOneTodo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 151C0B5F17C8446400CD2A32 /* Build configuration list for PBXNativeTarget "JavaOneTodo" */;
+			buildPhases = (
+				151C0B3E17C8446300CD2A32 /* Sources */,
+				151C0B3F17C8446300CD2A32 /* Frameworks */,
+				151C0B4017C8446300CD2A32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				158682ED17D985E5008947F8 /* PBXTargetDependency */,
+			);
+			name = JavaOneTodo;
+			productName = JavaOneTodo;
+			productReference = 151C0B4217C8446400CD2A32 /* JavaOneTodo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		151C0B3A17C8446300CD2A32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JavaOne;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Ryan Cuprak";
+			};
+			buildConfigurationList = 151C0B3D17C8446300CD2A32 /* Build configuration list for PBXProject "JavaOneTodo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 151C0B3917C8446300CD2A32;
+			productRefGroup = 151C0B4317C8446400CD2A32 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 158682CD17D97804008947F8 /* Products */;
+					ProjectRef = 158682CC17D97804008947F8 /* RestKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				151C0B4117C8446300CD2A32 /* JavaOneTodo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		158682D417D97805008947F8 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 158682D317D97805008947F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		158682D617D97805008947F8 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 158682D517D97805008947F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		158682D817D97805008947F8 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 158682D717D97805008947F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		158682DA17D97805008947F8 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 158682D917D97805008947F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		151C0B4017C8446300CD2A32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151C0B5017C8446400CD2A32 /* InfoPlist.strings in Resources */,
+				151C0B5817C8446400CD2A32 /* Default.png in Resources */,
+				151C0B5A17C8446400CD2A32 /* Default@2x.png in Resources */,
+				151C0B5C17C8446400CD2A32 /* Default-568h@2x.png in Resources */,
+				151C0B6317C8458600CD2A32 /* Storyboard.storyboard in Resources */,
+				1586831D17DD0434008947F8 /* ToDoItemCell.xib in Resources */,
+				1586832517DD06E8008947F8 /* checkBox.png in Resources */,
+				1586832617DD06E8008947F8 /* checkBox@2x.png in Resources */,
+				1586832717DD06E8008947F8 /* checkBoxMarked.png in Resources */,
+				1586832817DD06E8008947F8 /* checkBoxMarked@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		151C0B3E17C8446300CD2A32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				151C0B5217C8446400CD2A32 /* main.m in Sources */,
+				151C0B5617C8446400CD2A32 /* JavaOneAppDelegate.m in Sources */,
+				151C0B6617C9210100CD2A32 /* LoginViewController.m in Sources */,
+				1586830B17DABEB4008947F8 /* ToDoItem.m in Sources */,
+				1586831917DCF3FE008947F8 /* ToDoItemStore.m in Sources */,
+				1586832C17DD0D5D008947F8 /* ToDoItemCell.m in Sources */,
+				1586832F17DD2443008947F8 /* ToDoViewController.m in Sources */,
+				1586833217DD366A008947F8 /* EditItemViewController.m in Sources */,
+				1586833717DD72F2008947F8 /* TodoClient.m in Sources */,
+				1586833A17E011D8008947F8 /* AsyncTaskEvent.m in Sources */,
+				1565B47E17E667D300D219C2 /* ChatViewController.m in Sources */,
+				1565B48A17E68E6700D219C2 /* base64.c in Sources */,
+				1565B48B17E68E6700D219C2 /* NSData+SRB64Additions.m in Sources */,
+				1565B48C17E68E6700D219C2 /* SRWebSocket.m in Sources */,
+				1565B49217E6953E00D219C2 /* ChatCell.m in Sources */,
+				1565B49517E6964900D219C2 /* ChatMessage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		158682ED17D985E5008947F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 158682EC17D985E5008947F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		151C0B4E17C8446400CD2A32 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				151C0B4F17C8446400CD2A32 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		151C0B5D17C8446400CD2A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		151C0B5E17C8446400CD2A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		151C0B6017C8446400CD2A32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JavaOneTodo/JavaOneTodo-Prefix.pch";
+				INFOPLIST_FILE = "JavaOneTodo/JavaOneTodo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		151C0B6117C8446400CD2A32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JavaOneTodo/JavaOneTodo-Prefix.pch";
+				INFOPLIST_FILE = "JavaOneTodo/JavaOneTodo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILT_PRODUCTS_DIR)/../../Headers\"";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		151C0B3D17C8446300CD2A32 /* Build configuration list for PBXProject "JavaOneTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151C0B5D17C8446400CD2A32 /* Debug */,
+				151C0B5E17C8446400CD2A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		151C0B5F17C8446400CD2A32 /* Build configuration list for PBXNativeTarget "JavaOneTodo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				151C0B6017C8446400CD2A32 /* Debug */,
+				151C0B6117C8446400CD2A32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 151C0B3A17C8446300CD2A32 /* Project object */;
+}
