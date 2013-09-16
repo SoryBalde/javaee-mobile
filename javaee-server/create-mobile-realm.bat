@@ -1,0 +1,2 @@
+asadmin delete-auth-realm mobile-realm
+asadmin create-auth-realm --classname com.sun.enterprise.security.ee.auth.realm.jdbc.JDBCRealm --property jaas-context=jdbcRealm:datasource-jndi=jdbc/__default:user-table=mobile_users:user-name-column=username:password-column=password:group-table=mobile_groups:group-name-column=group_name mobile-realm

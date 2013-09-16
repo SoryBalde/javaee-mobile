@@ -41,8 +41,7 @@ package org.glassfish.javaee.mobile.server.todo;
 
 import java.io.Serializable;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
 import javax.validation.Valid;
@@ -60,25 +59,20 @@ import javax.ws.rs.Produces;
 @Path("/todo/{username}")
 @ApplicationScoped
 public class ToDoResource implements Serializable {
-    
-    /**
-     * Logger
-     */
-    private static final Logger logger = Logger.getLogger("ToDoResource");
+	private static final long serialVersionUID = 1L;
 
     @EJB // @Inject should work.
     private ToDoService service;
 
     @POST
     @Consumes({"application/json"})
-    @Produces({"plain/text"})
+    @Produces({"text/plain"})
     public String create(
             @PathParam("username")
             @NotNull
             @Size(min = 6, max = 14) String username,
-            ToDoItem item) {
-        logger.log(Level.INFO, "Adding item: {0}", item);
-        return Long.toString(service.addToDoItem(username, item));
+            @Valid ToDoItem item) {
+        return service.addToDoItem(username, item).toString();
     }
 
     @PUT
@@ -91,14 +85,13 @@ public class ToDoResource implements Serializable {
             @PathParam("id") Long id,
             @Valid ToDoItem item) {
         item.setId(id);
-        logger.log(Level.INFO, "Updating item: {0}", id);
         service.updateToDoItem(username, item);
     }
 
     @DELETE
     @Path("{id}")
     public void remove(
-            @PathParam ("username")
+            @PathParam("username")
             @NotNull
             @Size(min = 6, max = 14) String username,
             @PathParam("id") Long id) {

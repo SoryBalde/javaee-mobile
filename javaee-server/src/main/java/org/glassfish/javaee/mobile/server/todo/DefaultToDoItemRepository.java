@@ -45,7 +45,7 @@ import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@RequestScoped // Remove this, it should be default scoped.
+@RequestScoped // TODO Remove this, it should be default scoped.
 public class DefaultToDoItemRepository
         implements ToDoItemRepository, Serializable {
 
@@ -53,13 +53,8 @@ public class DefaultToDoItemRepository
     private EntityManager entityManager;
 
     @Override
-    public long create(ToDoItem item) {
-        try {
-            entityManager.persist(item);
-        } catch (Throwable t) {
-            System.out.println("Message: " + t.getMessage());
-            System.out.println("" + t.getMessage());
-        }
+    public Long create(ToDoItem item) {
+        entityManager.persist(item);
         return item.getId();
     }
 

@@ -40,8 +40,6 @@
 package org.glassfish.javaee.mobile.server.chat;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;

@@ -1,0 +1,6 @@
+INSERT INTO mobile_users (username, password) VALUES ('rrahman', '5b11618c2e44027877d0cd0921ed166b9f176f50587fc91e7534dd2946db77d6')
+INSERT INTO mobile_users (username, password) VALUES ('rcuprak', '5b11618c2e44027877d0cd0921ed166b9f176f50587fc91e7534dd2946db77d6')
+INSERT INTO mobile_users (username, password) VALUES ('bmuthuvarathan', '5b11618c2e44027877d0cd0921ed166b9f176f50587fc91e7534dd2946db77d6')
+INSERT INTO mobile_groups (username, group_name) VALUES ('rrahman', 'mobile')
+INSERT INTO mobile_groups (username, group_name) VALUES ('rcuprak', 'mobile')
+INSERT INTO mobile_groups (username, group_name) VALUES ('bmuthuvarathan', 'mobile')
