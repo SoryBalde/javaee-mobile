@@ -62,7 +62,13 @@ import javax.websocket.server.ServerEndpoint;
 @Singleton
 public class ChatServer {
 
-    private Set<Session> peers;
+    /**
+     * Logger
+     */
+    private static final Logger logger = Logger
+            .getLogger(ChatServer.class.getName());
+
+    private final Set<Session> peers;
 
     public ChatServer() {
         peers = new HashSet<>();
@@ -70,22 +76,29 @@ public class ChatServer {
 
     @OnOpen
     public void onOpen(Session peer) {
+        logger.log(Level.INFO, "Opened session: {0}", peer);
         peers.add(peer);
     }
 
     @OnClose
     public void onClose(Session peer) {
+        logger.log(Level.INFO, "Closed session: {0}", peer);
         peers.remove(peer);
     }
 
     @OnMessage
-    public void onMessage(@Valid ChatMessage message) {
+    public void onMessage(@Valid ChatMessage message, Session session) {
+        logger.log(Level.INFO, "Received message {0} from peer {1}",
+                new Object[]{message, session});
+
         for (Session peer : peers) {
             try {
+                logger.log(Level.INFO, "Broadcasting message {0} to peer {1}",
+                        new Object[]{message, peer});
+
                 peer.getBasicRemote().sendObject(message);
             } catch (IOException | EncodeException ex) {
-                Logger.getLogger(ChatServer.class.getName()).log(
-                        Level.SEVERE, "Error sending message", ex);
+                logger.log(Level.SEVERE, "Error sending message", ex);
             }
         }
     }
@@ -97,18 +110,16 @@ public class ChatServer {
                 // Just report the first validation problem.
                 JsonObject jsonObject = Json.createObjectBuilder()
                         .add("error",
-                        ((ConstraintViolationException) error.getCause())
-                        .getConstraintViolations().iterator().next()
-                        .getMessage())
+                                ((ConstraintViolationException) error.getCause())
+                                .getConstraintViolations().iterator().next()
+                                .getMessage())
                         .build();
                 session.getBasicRemote().sendText(jsonObject.toString());
             } else {
-                Logger.getLogger(ChatServer.class.getName()).log(
-                        Level.SEVERE, null, error);
+                logger.log(Level.SEVERE, null, error);
             }
         } catch (IOException ex) {
-            Logger.getLogger(ChatServer.class.getName()).log(
-                    Level.SEVERE, null, ex);
+            logger.log(Level.SEVERE, null, ex);
         }
     }
 }

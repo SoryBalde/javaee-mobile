@@ -88,11 +88,11 @@ public class ChatMessage
     @Override
     public String encode(ChatMessage chatMessage) {
         JsonObject jsonObject = Json.createObjectBuilder()
-                .add("user", user + "_r")
-                .add("message", message)
+                .add("user", chatMessage.user)
+                .add("message", chatMessage.message)
                 .add("timestamp",
-                new SimpleDateFormat("MM/dd/yyyy h:mm:ss a z")
-                .format(new Date()))
+                        new SimpleDateFormat("MM/dd/yyyy h:mm:ss a z")
+                        .format(new Date()))
                 .build();
 
         return jsonObject.toString();
@@ -101,5 +101,10 @@ public class ChatMessage
     @Override
     public void destroy() {
         // Nothing to do.
+    }
+
+    @Override
+    public String toString() {
+        return "ChatMessage{" + "user=" + user + ", message=" + message + '}';
     }
 }
