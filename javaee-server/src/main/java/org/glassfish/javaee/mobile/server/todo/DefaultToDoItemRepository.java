@@ -55,6 +55,7 @@ public class DefaultToDoItemRepository
     @Override
     public Long create(ToDoItem item) {
         entityManager.persist(item);
+
         return item.getId();
     }
 

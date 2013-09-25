@@ -48,46 +48,47 @@ import javax.inject.Inject;
 
 @Stateless
 public class DefaultToDoService implements ToDoService {
-	/**
-	 * Logger
-	 */
-	private static final Logger logger = Logger
-			.getLogger(DefaultToDoService.class.getName());
 
-	@Inject
-	private ToDoItemRepository repository;
+    /**
+     * Logger
+     */
+    private static final Logger logger = Logger
+            .getLogger(DefaultToDoService.class.getName());
 
-	@Override
-	public Long addToDoItem(String username, ToDoItem item) {
-		item.setUsername(username);
+    @Inject
+    private ToDoItemRepository repository;
 
-		logger.log(Level.INFO, "Adding item: {0}", item);
+    @Override
+    public Long addToDoItem(String username, ToDoItem item) {
+        item.setUsername(username);
 
-		return repository.create(item);
-	}
+        logger.log(Level.INFO, "Adding item: {0}", item);
 
-	@Override
-	public void updateToDoItem(String username, ToDoItem item) {
-		item.setUsername(username);
+        return repository.create(item);
+    }
 
-		logger.log(Level.INFO, "Updating item: {0}", item);
+    @Override
+    public void updateToDoItem(String username, ToDoItem item) {
+        item.setUsername(username);
 
-		repository.update(item);
-	}
+        logger.log(Level.INFO, "Updating item: {0}", item);
 
-	@Override
-	public void removeToDoItem(String username, Long id) {
-		ToDoItem item = repository.find(id);
+        repository.update(item);
+    }
 
-		logger.log(Level.INFO, "Removing item: {0}", item);
+    @Override
+    public void removeToDoItem(String username, Long id) {
+        ToDoItem item = repository.find(id);
 
-		repository.delete(item);
-	}
+        logger.log(Level.INFO, "Removing item: {0}", item);
 
-	@Override
-	public List<ToDoItem> findToDoItemsByUsername(String username) {
-		logger.log(Level.INFO, "Getting all items for: {0}", username);
+        repository.delete(item);
+    }
 
-		return repository.findByUsername(username);
-	}
+    @Override
+    public List<ToDoItem> findToDoItemsByUsername(String username) {
+        logger.log(Level.INFO, "Getting all items for: {0}", username);
+
+        return repository.findByUsername(username);
+    }
 }
