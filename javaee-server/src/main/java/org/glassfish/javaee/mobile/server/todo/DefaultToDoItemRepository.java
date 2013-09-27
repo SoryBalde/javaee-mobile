@@ -41,11 +41,9 @@ package org.glassfish.javaee.mobile.server.todo;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.enterprise.context.RequestScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-@RequestScoped // TODO Remove this, it should be default scoped.
 public class DefaultToDoItemRepository
         implements ToDoItemRepository, Serializable {
 

@@ -42,8 +42,8 @@ package org.glassfish.javaee.mobile.server.todo;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.ejb.EJB;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -59,9 +59,10 @@ import javax.ws.rs.Produces;
 @Path("/todo/{username}")
 @ApplicationScoped
 public class ToDoResource implements Serializable {
-	private static final long serialVersionUID = 1L;
 
-    @EJB // @Inject should work.
+    private static final long serialVersionUID = 1L;
+
+    @Inject
     private ToDoService service;
 
     @POST
