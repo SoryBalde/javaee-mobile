@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JavaOne Assistant</string>
+    <string name="action_settings">Settings</string>
+    <string name="username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="submit">Submit</string>
+    <string name="title_activity_home">JavaOne Assistant</string>
+    <string name="todos">Session ToDos</string>
+    <string name="chatter">JavaOne Chatter</string>
+    <string name="title_activity_to_do_list">ToDo List</string>
+    <string name="todolist">ToDo Items</string>
+    <string name="todoAdd">Add ToDo</string>
+    <string name="todoDelete">Delete ToDo</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+    <string name="title_activity_add_todo">Add Todo Activity</string>
+    <string name="title_activity_update_todo">Update Todo</string>
+    <string name="todo_completed">Completed</string>
+    <string name="quit">Quit</string>
+    <string name="title_activity_chat2">JavaOne Chatter</string>
+    <string name="send">Send</string>
+    <string name="msgHint">Type messag here</string>
+
+</resources>
